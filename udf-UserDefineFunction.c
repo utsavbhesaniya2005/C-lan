@@ -1,25 +1,34 @@
 #include<stdio.h>
 
 greet(){
-	printf("Hello, Good Morning...\n\n");
+	printf("Hello, Good Morning...\n\n"); // TNRN - Tech(Arguement) Nothing Return Nothing
 }
 
 greetName(char n[50]){
 	
-	printf("Hello %s, Good Morning...\n\n", n);
+	printf("Hello %s, Good Morning...\n\n", n); // TSRN - Tech Something Return Nothing
 }
 
-sum(int a, int b){
+int sum(int a, int b){
 	
-	int ans = a + b;
-	printf("\n\nAns = %d", ans);
+	return a + b; // TSRS - Tech Something Return Something
 }
+
+float pi(){
+	
+	return 3.14; // TNRS - Tech Nothing Return Something
+}
+
 
 main(){
 	
-	greet();
+	greet(); // TNRN - Tech(Arguement) Nothing Return Nothing
 	
-	greetName("Utsav");
+	greetName("Utsav"); // TSRN - Tech Something Return Nothing
 	
-	sum(25,60);
+	int total = sum(25,60); 
+	printf("%d\n\n", total);   // TSRS - Tech Something Return Something
+	
+	float p = pi();
+	printf("%.2f", p); // TNRS - Tech Nothing Return Something
 }
